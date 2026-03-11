@@ -30,6 +30,10 @@ body {
     background: var(--white);
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
 a {
     color: inherit;
 }
@@ -155,8 +159,40 @@ select {
     box-shadow: none;
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-phone,
+.mobile-nav-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.95rem;
+    padding: 0.8rem 1.15rem;
+    border-radius: 999px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.header-phone {
+    display: none;
+    background: var(--blue-900);
+    color: var(--white);
+}
+
+.mobile-nav-actions {
+    display: none;
+}
+
 .menu-toggle {
     display: none;
+    align-items: center;
+    gap: 0.7rem;
     padding: 0.75rem 1rem;
     border: 1px solid var(--line);
     border-radius: 999px;
@@ -165,6 +201,47 @@ select {
     font-family: "Montserrat", sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
+}
+
+.menu-toggle-icon {
+    position: relative;
+    width: 1rem;
+    height: 2px;
+    background: currentColor;
+    border-radius: 999px;
+}
+
+.menu-toggle-icon::before,
+.menu-toggle-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1rem;
+    height: 2px;
+    background: currentColor;
+    border-radius: 999px;
+}
+
+.menu-toggle-icon::before {
+    top: -0.35rem;
+}
+
+.menu-toggle-icon::after {
+    top: 0.35rem;
+}
+
+.menu-toggle.is-open .menu-toggle-icon {
+    background: transparent;
+}
+
+.menu-toggle.is-open .menu-toggle-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.menu-toggle.is-open .menu-toggle-icon::after {
+    top: 0;
+    transform: rotate(-45deg);
 }
 
 .hero {
@@ -766,15 +843,62 @@ h3 {
 }
 
 @media (max-width: 768px) {
+    .utility-bar {
+        display: none;
+    }
+
+    .site-header {
+        background: rgba(255, 255, 255, 0.99);
+    }
+
+    .header-row {
+        min-height: auto;
+        padding: 0.9rem 0;
+        gap: 0.85rem;
+    }
+
+    .brand {
+        gap: 0.75rem;
+        min-width: 0;
+    }
+
+    .brand-badge {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 10px;
+        font-size: 0.84rem;
+    }
+
+    .brand-copy {
+        min-width: 0;
+    }
+
+    .brand-name {
+        font-size: 0.96rem;
+    }
+
+    .brand-subtitle {
+        display: none;
+    }
+
+    .header-actions {
+        margin-left: auto;
+        gap: 0.55rem;
+    }
+
+    .header-phone {
+        display: inline-flex;
+    }
+
     .site-nav {
         position: absolute;
-        top: calc(100% + 0.75rem);
+        top: calc(100% + 0.4rem);
         right: 1rem;
         left: 1rem;
         display: none;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0.6rem;
+        align-items: stretch;
+        gap: 0.7rem;
         padding: 1rem;
         background: var(--white);
         border: 1px solid var(--line);
@@ -790,13 +914,51 @@ h3 {
         display: flex !important;
         position: static;
         flex-direction: row;
+        align-items: center;
         padding: 0;
         border: 0;
         box-shadow: none;
     }
 
+    .site-nav:not(.site-nav-static) a {
+        width: 100%;
+        padding: 0.95rem 1rem;
+        border-radius: 14px;
+        background: var(--blue-025);
+        font-size: 0.86rem;
+    }
+
+    .site-nav-static a {
+        width: auto;
+        padding: 0;
+        background: transparent;
+    }
+
+    .mobile-nav-actions {
+        display: grid;
+        gap: 0.7rem;
+        width: 100%;
+        padding-top: 0.7rem;
+        border-top: 1px solid var(--line);
+    }
+
+    .mobile-nav-button {
+        width: 100%;
+        border: 1px solid var(--line);
+        background: var(--white);
+        color: var(--blue-900);
+    }
+
+    .mobile-nav-button-primary {
+        border-color: var(--blue-900);
+        background: var(--blue-900);
+        color: var(--white);
+    }
+
     .menu-toggle {
         display: inline-flex;
+        min-height: 2.95rem;
+        padding-inline: 0.95rem;
     }
 
     .hero-copy,
@@ -814,6 +976,10 @@ h3 {
         padding: 1.5rem;
     }
 
+    .hero {
+        padding: 2rem 0 2.25rem;
+    }
+
     .trust-grid,
     .highlight-grid,
     .coverage-grid,
@@ -821,6 +987,43 @@ h3 {
     .service-center-grid,
     .contact-cards {
         grid-template-columns: 1fr;
+    }
+
+    .hero-copy {
+        padding: 0;
+        text-align: left;
+    }
+
+    h1 {
+        max-width: 12ch;
+        margin-inline: 0;
+        font-size: clamp(2.2rem, 11vw, 3rem);
+    }
+
+    .lead {
+        margin-inline: 0;
+        max-width: none;
+        font-size: 1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+    .coverage-pills {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: stretch;
+    }
+
+    .coverage-pills span {
+        text-align: center;
     }
 
     .hero-media {
@@ -835,19 +1038,66 @@ h3 {
         padding: 1.5rem;
     }
 
-    .utility-row,
     .footer-row,
     .footer-bottom {
         flex-direction: column;
         align-items: center;
     }
 
+    .highlight-card,
+    .trust-card {
+        text-align: left;
+    }
+
+    .highlight-card p,
+    .trust-card p,
+    .contact-card p {
+        font-size: 0.98rem;
+        line-height: 1.65;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .contact-card {
+        justify-items: start;
+        text-align: left;
+    }
+
+    .hours-panel {
+        padding: 1.5rem 1.2rem;
+    }
+
     .hours-row {
         font-size: 0.98rem;
     }
+}
 
-    h1 {
-        max-width: 14ch;
+@media (max-width: 560px) {
+    .container {
+        width: min(var(--container), calc(100% - 1.25rem));
+    }
+
+    .site-nav {
+        right: 0.625rem;
+        left: 0.625rem;
+    }
+
+    .header-phone,
+    .menu-toggle {
+        padding-inline: 0.85rem;
+    }
+
+    .coverage-pills {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.55rem;
+    }
+
+    .hours-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
     }
 }
 
