@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#003087">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
@@ -72,6 +72,14 @@
     </script>
 </head>
 <body>
+    <div class="utility-bar">
+        <div class="container utility-row">
+            <a href="tel:+19183014281">Call: 918-301-4281</a>
+            <a href="mailto:cneal2@farmersagent.com">Email: cneal2@farmersagent.com</a>
+            <span>Mon - Fri: 8:30 AM - 5:30 PM</span>
+        </div>
+    </div>
+
     <header class="site-header">
         <div class="container header-row">
             <a class="brand" href="#top" aria-label="Carlos Neal home">
@@ -87,9 +95,9 @@
             </button>
 
             <nav class="site-nav" id="site-nav" aria-label="Primary">
-                <a href="#approach">Approach</a>
+                <a href="#about">About</a>
                 <a href="#coverage">Coverage</a>
-                <a href="#office">Office</a>
+                <a href="#process">Process</a>
                 <a href="#contact" class="nav-link-strong">Contact</a>
             </nav>
         </div>
@@ -99,49 +107,45 @@
         <section class="hero">
             <div class="container hero-layout">
                 <div class="hero-copy reveal">
-                    <p class="eyebrow">Farmers Insurance Agent | Tulsa, Oklahoma</p>
-                    <h1>Clear coverage guidance with direct access to the office.</h1>
+                    <p class="eyebrow">Tulsa Insurance Guidance</p>
+                    <h1>Local insurance support with a straightforward office experience.</h1>
                     <p class="lead">
-                        Carlos Neal helps Tulsa clients review insurance options in a straightforward way, with support
-                        for auto, home, life, renters, business, condo, umbrella, and recreational coverage.
+                        Carlos Neal helps Tulsa drivers, homeowners, renters, families, and business owners review
+                        coverage with direct local support and a simpler path to answers.
                     </p>
 
                     <div class="hero-actions">
-                        <a class="button button-primary" href="tel:+19183014281">Call 918-301-4281</a>
+                        <a class="button button-primary" href="tel:+19183014281">Call the office</a>
                         <a class="button button-secondary" href="mailto:cneal2@farmersagent.com">Email Carlos</a>
                     </div>
 
-                    <div class="hero-meta">
-                        <div class="meta-item">
-                            <span class="meta-label">Office hours</span>
-                            <strong>Mon - Fri, 8:30 AM - 5:30 PM</strong>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Location</span>
-                            <strong>6506 S Lewis Ave Suite 107, Tulsa, OK</strong>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Focus</span>
-                            <strong>Personal, property, and business coverage</strong>
-                        </div>
+                    <div class="coverage-pills" aria-label="Coverage categories">
+                        <span>Auto</span>
+                        <span>Home</span>
+                        <span>Life</span>
+                        <span>Renters</span>
+                        <span>Business</span>
+                        <span>Condo</span>
+                        <span>Umbrella</span>
+                        <span>Recreational</span>
                     </div>
                 </div>
 
-                <aside class="hero-panel reveal">
-                    <p class="panel-eyebrow">Office details</p>
-                    <h2>Simple ways to get started.</h2>
+                <aside class="hero-card reveal">
+                    <p class="card-kicker">Office information</p>
+                    <h2>Direct contact, simple next steps.</h2>
 
-                    <div class="info-stack">
-                        <div class="info-row">
-                            <span class="info-label">Phone</span>
+                    <div class="office-detail-list">
+                        <div class="office-detail">
+                            <span>Phone</span>
                             <a href="tel:+19183014281">+1 918-301-4281</a>
                         </div>
-                        <div class="info-row">
-                            <span class="info-label">Email</span>
+                        <div class="office-detail">
+                            <span>Email</span>
                             <a href="mailto:cneal2@farmersagent.com">cneal2@farmersagent.com</a>
                         </div>
-                        <div class="info-row">
-                            <span class="info-label">Address</span>
+                        <div class="office-detail">
+                            <span>Address</span>
                             <a href="https://maps.google.com/?q=6506+S+Lewis+Ave+Suite+107+Tulsa+OK+74136" target="_blank" rel="noreferrer">
                                 6506 S Lewis Ave Suite 107<br>
                                 Tulsa, OK 74136
@@ -149,40 +153,61 @@
                         </div>
                     </div>
 
-                    <div class="panel-note">
-                        Questions about coverage, policy updates, appointments, or next steps can all start with one direct call or email to the office.
+                    <div class="office-callout">
+                        Weekday office support for coverage questions, billing follow-up, appointment requests, and policy conversations.
                     </div>
                 </aside>
             </div>
         </section>
 
-        <section class="section section-muted" id="approach">
-            <div class="container">
-                <div class="section-heading reveal">
-                    <p class="eyebrow">Approach</p>
-                    <h2>Practical guidance, not a complicated process.</h2>
+        <section class="trust-section">
+            <div class="container trust-grid">
+                <article class="trust-card reveal">
+                    <h3>Personal service</h3>
+                    <p>Clients work through questions with a local office instead of a generic lead flow.</p>
+                </article>
+                <article class="trust-card reveal">
+                    <h3>Clear coverage guidance</h3>
+                    <p>Conversations stay practical, focused, and easier to understand across multiple coverage types.</p>
+                </article>
+                <article class="trust-card reveal">
+                    <h3>Responsive office support</h3>
+                    <p>Call, email, and location details stay visible so follow-up is simple when needs change.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-soft" id="about">
+            <div class="container split-layout">
+                <div class="section-copy reveal">
+                    <p class="eyebrow">About The Office</p>
+                    <h2>Built around the kind of help people usually want first.</h2>
                     <p>
-                        The goal is to make it easier for people to connect with the office, explain what they need,
-                        and understand the coverage options that fit their situation.
+                        Carlos Neal works with Tulsa clients to identify coverage that fits their needs and explain
+                        options in a more direct, personalized way. The focus is on helping them understand what they
+                        have, what they may need, and who to call
+                        when they want to talk it through.
+                    </p>
+                    <p>
+                        Whether someone is looking at auto, home, renters, life, business, condo, umbrella, or
+                        recreational coverage, the office offers a local point of contact with weekday availability.
                     </p>
                 </div>
 
-                <div class="feature-grid">
-                    <article class="feature-card reveal">
-                        <span class="feature-index">01</span>
-                        <h3>Start with the real question</h3>
-                        <p>New home, different vehicle, business changes, or a general review. The conversation starts where the need actually is.</p>
-                    </article>
-                    <article class="feature-card reveal">
-                        <span class="feature-index">02</span>
-                        <h3>Review options clearly</h3>
-                        <p>Coverage categories are explained in plain language so clients can compare options without extra noise.</p>
-                    </article>
-                    <article class="feature-card reveal">
-                        <span class="feature-index">03</span>
-                        <h3>Stay connected to the office</h3>
-                        <p>Call, email, and location details stay visible throughout the site so follow-up feels easy.</p>
-                    </article>
+                <div class="statement-card reveal">
+                    <p class="statement-kicker">At a glance</p>
+                    <div class="statement-item">
+                        <strong>Local Tulsa office</strong>
+                        <span>6506 S Lewis Ave Suite 107</span>
+                    </div>
+                    <div class="statement-item">
+                        <strong>Weekday hours</strong>
+                        <span>Monday through Friday, 8:30 AM to 5:30 PM</span>
+                    </div>
+                    <div class="statement-item">
+                        <strong>Direct support</strong>
+                        <span>Phone, email, office visits, and appointment requests</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -190,79 +215,113 @@
         <section class="section" id="coverage">
             <div class="container">
                 <div class="section-heading reveal">
-                    <p class="eyebrow">Coverage</p>
+                    <p class="eyebrow">Coverage Options</p>
                     <h2>Coverage areas available through the Tulsa office.</h2>
                     <p>
-                        Carlos Neal helps clients understand the lines of coverage most people ask about first, from
-                        everyday personal policies to business and added liability protection.
+                        The site keeps the main lines of coverage easy to scan, following the structure common across
+                        many local agency websites while staying centered on direct contact and local office access.
                     </p>
                 </div>
 
                 <div class="coverage-grid">
                     <article class="coverage-card reveal">
-                        <span class="coverage-label">Auto</span>
-                        <p>Coverage review for daily drivers, multi-vehicle households, and general auto protection questions.</p>
+                        <h3>Auto Insurance</h3>
+                        <p>Support for everyday drivers, households with multiple vehicles, and general auto coverage reviews.</p>
                     </article>
                     <article class="coverage-card reveal">
-                        <span class="coverage-label">Home</span>
-                        <p>Homeowners coverage discussions for property protection, liability, and policy updates.</p>
+                        <h3>Home Insurance</h3>
+                        <p>Coverage discussions around property protection, liability, and questions about current policies.</p>
                     </article>
                     <article class="coverage-card reveal">
-                        <span class="coverage-label">Life</span>
-                        <p>Life insurance conversations focused on planning, dependents, and long-term protection goals.</p>
+                        <h3>Life Insurance</h3>
+                        <p>Planning-focused conversations for clients thinking about family protection and longer-term goals.</p>
                     </article>
                     <article class="coverage-card reveal">
-                        <span class="coverage-label">Renters</span>
-                        <p>Support for tenants who want protection for belongings, liability, and everyday risks.</p>
+                        <h3>Renters Insurance</h3>
+                        <p>Help for tenants reviewing protection for belongings, liability, and day-to-day risks.</p>
                     </article>
                     <article class="coverage-card reveal">
-                        <span class="coverage-label">Business</span>
-                        <p>Coverage discussions for local business owners reviewing property, liability, and operational needs.</p>
+                        <h3>Business Insurance</h3>
+                        <p>Coverage guidance for business owners looking at property, liability, and operational needs.</p>
                     </article>
                     <article class="coverage-card reveal">
-                        <span class="coverage-label">Condo</span>
-                        <p>Condo coverage guidance for owners balancing association coverage with personal protection needs.</p>
+                        <h3>Condo Insurance</h3>
+                        <p>Useful for owners balancing association coverage with their own property and liability exposure.</p>
                     </article>
                     <article class="coverage-card reveal">
-                        <span class="coverage-label">Umbrella</span>
-                        <p>An additional liability layer for clients who need broader protection beyond a base policy.</p>
+                        <h3>Umbrella Insurance</h3>
+                        <p>An extra layer of liability protection for clients who need broader coverage support.</p>
                     </article>
                     <article class="coverage-card reveal">
-                        <span class="coverage-label">Recreational</span>
-                        <p>Coverage support for motorcycles, boats, RVs, and other recreational vehicles.</p>
+                        <h3>Motorcycle &amp; Recreational</h3>
+                        <p>Coverage conversations for motorcycles, boats, RVs, and other recreational vehicles.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="section section-muted" id="office">
-            <div class="container office-layout">
-                <div class="office-copy reveal">
-                    <p class="eyebrow">Office</p>
-                    <h2>Local office information stays easy to find.</h2>
+        <section class="section section-soft" id="process">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">How It Works</p>
+                    <h2>A simpler agency-style path to answers.</h2>
                     <p>
-                        This site is designed around direct contact, not a long quote funnel. Visitors can call, email,
-                        or open directions right away and connect with the Tulsa office during weekday business hours.
+                        The pattern is familiar because it is what strong local agency sites tend to do well: make the
+                        first contact easy, explain the process, and keep the office accessible throughout.
                     </p>
-                    <ul class="office-list">
-                        <li>Direct office phone and email in every major section</li>
-                        <li>Clear weekday hours for calls and appointments</li>
-                        <li>Simple directions link for the Lewis Avenue office</li>
-                    </ul>
                 </div>
 
-                <div class="office-panel reveal">
-                    <h3>Visit the Tulsa office</h3>
-                    <address class="office-address">
-                        6506 S Lewis Ave Suite 107<br>
-                        Tulsa, OK 74136
-                    </address>
+                <div class="process-grid">
+                    <article class="process-card reveal">
+                        <span class="process-step">1</span>
+                        <h3>Reach the office</h3>
+                        <p>Start with a direct call, email, or office visit instead of filling out a long online request.</p>
+                    </article>
+                    <article class="process-card reveal">
+                        <span class="process-step">2</span>
+                        <h3>Review the need</h3>
+                        <p>Talk through the current situation, what coverage is in place, and what questions need attention.</p>
+                    </article>
+                    <article class="process-card reveal">
+                        <span class="process-step">3</span>
+                        <h3>Choose next steps</h3>
+                        <p>Move forward with a clearer understanding of the options and the right office contact for follow-up.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                    <div class="office-actions">
-                        <a class="button button-primary" href="https://maps.google.com/?q=6506+S+Lewis+Ave+Suite+107+Tulsa+OK+74136" target="_blank" rel="noreferrer">Open directions</a>
-                        <a class="button button-secondary" href="mailto:cneal2@farmersagent.com">Send an email</a>
+        <section class="section" id="contact">
+            <div class="container contact-layout">
+                <div class="contact-copy reveal">
+                    <p class="eyebrow">Contact The Office</p>
+                    <h2>Visit, call, or email the Tulsa office.</h2>
+                    <p>
+                        The site keeps contact front and center so people can connect in the way that fits best,
+                        whether they have a billing question, want to request an appointment, or need to review coverage.
+                    </p>
+
+                    <div class="contact-cards">
+                        <a class="contact-card reveal" href="tel:+19183014281">
+                            <span>Call</span>
+                            <strong>918-301-4281</strong>
+                            <p>Talk with the office during weekday business hours.</p>
+                        </a>
+                        <a class="contact-card reveal" href="mailto:cneal2@farmersagent.com">
+                            <span>Email</span>
+                            <strong>cneal2@farmersagent.com</strong>
+                            <p>Send questions, follow-up requests, or appointment needs by email.</p>
+                        </a>
+                        <a class="contact-card reveal" href="https://maps.google.com/?q=6506+S+Lewis+Ave+Suite+107+Tulsa+OK+74136" target="_blank" rel="noreferrer">
+                            <span>Directions</span>
+                            <strong>6506 S Lewis Ave Suite 107</strong>
+                            <p>Open directions and route directly to the office in Tulsa.</p>
+                        </a>
                     </div>
+                </div>
 
+                <div class="hours-panel reveal">
+                    <h3>Office Hours</h3>
                     <div class="hours-list" aria-label="Office hours">
                         <div class="hours-row" data-day="1"><span>Monday</span><span>8:30 AM - 5:30 PM</span></div>
                         <div class="hours-row" data-day="2"><span>Tuesday</span><span>8:30 AM - 5:30 PM</span></div>
@@ -272,37 +331,11 @@
                         <div class="hours-row" data-day="6"><span>Saturday</span><span>Closed</span></div>
                         <div class="hours-row" data-day="0"><span>Sunday</span><span>Closed</span></div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="section" id="contact">
-            <div class="container">
-                <div class="section-heading reveal">
-                    <p class="eyebrow">Contact</p>
-                    <h2>Choose the contact method that fits.</h2>
-                    <p>
-                        Whether the need is a coverage review, a billing follow-up, or an appointment, the site points
-                        visitors to the office directly.
-                    </p>
-                </div>
-
-                <div class="contact-grid">
-                    <a class="contact-card reveal" href="tel:+19183014281">
-                        <span class="contact-label">Call</span>
-                        <strong>918-301-4281</strong>
-                        <p>Speak with the office during weekday business hours.</p>
-                    </a>
-                    <a class="contact-card reveal" href="mailto:cneal2@farmersagent.com">
-                        <span class="contact-label">Email</span>
-                        <strong>cneal2@farmersagent.com</strong>
-                        <p>Use email for questions, follow-up, or appointment requests.</p>
-                    </a>
-                    <a class="contact-card reveal" href="https://maps.google.com/?q=6506+S+Lewis+Ave+Suite+107+Tulsa+OK+74136" target="_blank" rel="noreferrer">
-                        <span class="contact-label">Directions</span>
-                        <strong>6506 S Lewis Ave Suite 107</strong>
-                        <p>Open maps and route directly to the Tulsa office.</p>
-                    </a>
+                    <div class="hours-actions">
+                        <a class="button button-primary" href="tel:+19183014281">Call now</a>
+                        <a class="button button-secondary" href="mailto:cneal2@farmersagent.com">Email the office</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -312,7 +345,7 @@
         <div class="container footer-row">
             <div>
                 <p class="footer-title">Carlos Neal</p>
-                <p class="footer-text">Tulsa Farmers Insurance Agent</p>
+                <p class="footer-text">Farmers Insurance Agent in Tulsa, Oklahoma</p>
             </div>
             <div class="footer-links">
                 <a href="tel:+19183014281">918-301-4281</a>
