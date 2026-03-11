@@ -991,17 +991,17 @@ h3 {
 
     .hero-copy {
         padding: 0;
-        text-align: left;
+        text-align: center;
     }
 
     h1 {
         max-width: 12ch;
-        margin-inline: 0;
+        margin-inline: auto;
         font-size: clamp(2.2rem, 11vw, 3rem);
     }
 
     .lead {
-        margin-inline: 0;
+        margin-inline: auto;
         max-width: none;
         font-size: 1rem;
     }
@@ -1058,6 +1058,13 @@ h3 {
 
     .section {
         padding: 3rem 0;
+    }
+
+    #contact.section {
+        margin-top: 0.75rem;
+        padding-top: 2.4rem;
+        border-top: 4px solid var(--blue-900);
+        background: linear-gradient(180deg, rgba(231, 238, 248, 0.48) 0%, var(--white) 22%);
     }
 
     .contact-card {
