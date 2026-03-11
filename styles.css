@@ -183,11 +183,14 @@ select {
 
 .hero-copy,
 .hero-card,
+.hero-media,
 .trust-card,
+.highlight-card,
 .statement-card,
 .coverage-card,
 .process-card,
 .contact-card,
+.service-center-card,
 .hours-panel,
 .policy-card {
     background: var(--white);
@@ -200,6 +203,7 @@ select {
 }
 
 .hero-card,
+.hero-media,
 .statement-card,
 .hours-panel,
 .policy-card {
@@ -339,6 +343,35 @@ h3 {
     max-width: 10ch;
 }
 
+.hero-media {
+    position: relative;
+    min-height: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hero-media-image {
+    min-height: 100%;
+    background:
+        linear-gradient(180deg, rgba(0, 39, 96, 0.18), rgba(0, 39, 96, 0.35)),
+        url('https://www.publicdomainpictures.net/pictures/120000/velka/tulsa-oklahoma-downtown-1425480245xHe.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 38rem;
+}
+
+.hero-media-card {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: min(26rem, calc(100% - 3rem));
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid rgba(215, 227, 239, 0.9);
+    box-shadow: var(--shadow-soft);
+}
+
 .office-detail-list {
     display: grid;
     gap: 1rem;
@@ -378,6 +411,49 @@ h3 {
     margin-top: 1.5rem;
     padding-top: 1.25rem;
     border-top: 1px solid var(--line);
+}
+
+.service-highlights {
+    margin-top: -1.4rem;
+    padding-bottom: 3rem;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.highlight-card {
+    padding: 1.6rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.highlight-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-bottom: 1rem;
+    border-radius: 999px;
+    background: var(--blue-050);
+    color: var(--blue-900);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.highlight-card h3 {
+    margin-bottom: 0.65rem;
+}
+
+.highlight-card p,
+.service-center-card p {
+    margin: 0;
+    color: var(--text-700);
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 .trust-section {
@@ -473,6 +549,21 @@ h3 {
 
 .process-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.service-center-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.service-center-card {
+    padding: 1.5rem;
+    background: var(--blue-025);
+}
+
+.service-center-card h3 {
+    margin-bottom: 0.65rem;
 }
 
 .process-step {
@@ -621,8 +712,10 @@ h3 {
     .split-layout,
     .contact-layout,
     .trust-grid,
+    .highlight-grid,
     .coverage-grid,
-    .process-grid {
+    .process-grid,
+    .service-center-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -669,20 +762,39 @@ h3 {
 
     .hero-copy,
     .hero-card,
+    .hero-media-card,
     .trust-card,
+    .highlight-card,
     .statement-card,
     .coverage-card,
     .process-card,
     .contact-card,
+    .service-center-card,
     .hours-panel,
     .policy-card {
         padding: 1.5rem;
     }
 
     .trust-grid,
+    .highlight-grid,
     .coverage-grid,
-    .process-grid {
+    .process-grid,
+    .service-center-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero-media {
+        min-height: 0;
+    }
+
+    .hero-media-image {
+        min-height: 20rem;
+    }
+
+    .hero-media-card {
+        position: static;
+        width: auto;
+        margin: 1rem;
     }
 
     .utility-row,
