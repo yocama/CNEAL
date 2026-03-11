@@ -173,12 +173,18 @@ select {
 }
 
 .hero-layout,
-.split-layout,
-.contact-layout {
+.split-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
     gap: 2rem;
-    align-items: start;
+    align-items: center;
+}
+
+.contact-layout {
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+    text-align: center;
 }
 
 .hero-copy,
@@ -199,7 +205,11 @@ select {
 }
 
 .hero-copy {
-    padding: 3rem;
+    padding: 2rem 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
 }
 
 .hero-card,
@@ -238,6 +248,7 @@ h1 {
     max-width: 11ch;
     font-size: clamp(3rem, 6vw, 4.9rem);
     letter-spacing: -0.04em;
+    margin-inline: auto;
 }
 
 h2 {
@@ -271,6 +282,7 @@ h3 {
 .lead {
     margin-top: 1.2rem;
     max-width: 42rem;
+    margin-inline: auto;
 }
 
 .hero-actions,
@@ -279,6 +291,7 @@ h3 {
     flex-wrap: wrap;
     gap: 0.9rem;
     margin-top: 2rem;
+    justify-content: center;
 }
 
 .button {
@@ -326,6 +339,7 @@ h3 {
     flex-wrap: wrap;
     gap: 0.65rem;
     margin-top: 2rem;
+    justify-content: center;
 }
 
 .coverage-pills span {
@@ -362,8 +376,9 @@ h3 {
 
 .hero-media-card {
     position: absolute;
-    right: 1.5rem;
+    left: 50%;
     bottom: 1.5rem;
+    transform: translateX(-50%);
     width: min(26rem, calc(100% - 3rem));
     padding: 1.5rem;
     border-radius: var(--radius-md);
@@ -414,8 +429,7 @@ h3 {
 }
 
 .service-highlights {
-    margin-top: -1.4rem;
-    padding-bottom: 3rem;
+    padding-bottom: 3.5rem;
 }
 
 .highlight-grid {
@@ -427,21 +441,7 @@ h3 {
 .highlight-card {
     padding: 1.6rem;
     box-shadow: var(--shadow-soft);
-}
-
-.highlight-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.8rem;
-    height: 2.8rem;
-    margin-bottom: 1rem;
-    border-radius: 999px;
-    background: var(--blue-050);
-    color: var(--blue-900);
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    font-weight: 800;
+    text-align: center;
 }
 
 .highlight-card h3 {
@@ -581,20 +581,26 @@ h3 {
     font-weight: 800;
 }
 
+.contact-copy {
+    max-width: 46rem;
+}
+
 .contact-copy h2 {
-    max-width: 12ch;
+    max-width: none;
 }
 
 .contact-copy p {
     color: var(--text-700);
     font-size: 1.03rem;
     line-height: 1.75;
+    margin-top: 1rem;
 }
 
 .contact-cards {
     display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
-    margin-top: 2rem;
+    width: 100%;
 }
 
 .contact-card {
@@ -602,16 +608,28 @@ h3 {
     gap: 0.3rem;
     padding: 1.4rem;
     text-decoration: none;
+    justify-items: center;
+    text-align: center;
 }
 
 .contact-card strong {
     color: var(--blue-950);
     font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
+    font-size: 1.05rem;
+}
+
+.hours-panel {
+    width: min(100%, 44rem);
+    padding: 2.25rem;
+    text-align: center;
+}
+
+.hours-panel h3 {
+    font-size: 1.55rem;
 }
 
 .hours-list {
-    margin-top: 1rem;
+    margin-top: 1.35rem;
     border: 1px solid var(--line);
     border-radius: var(--radius-md);
     overflow: hidden;
@@ -621,9 +639,15 @@ h3 {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    padding: 0.9rem 1rem;
+    padding: 1rem 1.2rem;
     background: var(--white);
     border-bottom: 1px solid var(--line);
+    font-size: 1.02rem;
+}
+
+.hours-row span:first-child {
+    font-weight: 700;
+    color: var(--blue-950);
 }
 
 .hours-row:last-child {
@@ -644,9 +668,11 @@ h3 {
 .footer-row,
 .footer-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
+    text-align: center;
+    flex-direction: column;
 }
 
 .footer-text,
@@ -658,6 +684,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
 }
 
 .footer-links a {
@@ -710,7 +737,6 @@ h3 {
 @media (max-width: 1024px) {
     .hero-layout,
     .split-layout,
-    .contact-layout,
     .trust-grid,
     .highlight-grid,
     .coverage-grid,
@@ -779,7 +805,8 @@ h3 {
     .highlight-grid,
     .coverage-grid,
     .process-grid,
-    .service-center-grid {
+    .service-center-grid,
+    .contact-cards {
         grid-template-columns: 1fr;
     }
 
@@ -799,10 +826,13 @@ h3 {
 
     .utility-row,
     .footer-row,
-    .footer-bottom,
-    .hours-row {
+    .footer-bottom {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+
+    .hours-row {
+        font-size: 0.98rem;
     }
 
     h1 {
