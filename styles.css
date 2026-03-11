@@ -615,6 +615,22 @@ h3 {
     margin-top: 2rem;
 }
 
+.policy-copy h2 {
+    margin: 2rem 0 0.8rem;
+    font-size: 1.5rem;
+}
+
+.policy-copy ul {
+    margin: 0.5rem 0 1.25rem 1.2rem;
+    padding: 0;
+}
+
+.policy-copy li {
+    margin-bottom: 0.55rem;
+    line-height: 1.7;
+    color: rgba(25, 53, 47, 0.8);
+}
+
 .site-footer {
     padding: 2.5rem 0 3rem;
 }
