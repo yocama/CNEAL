@@ -5,8 +5,9 @@ Static marketing website for Carlos Neal in Tulsa, Oklahoma.
 ## Files
 
 - `index.html` - Main landing page
+- `contact-us.html` - Contact form page
 - `styles.css` - Shared styling for the landing page and privacy policy
-- `script.js` - Mobile navigation, reveal animations, current year, and office-hours highlight
+- `script.js` - Mobile navigation, reveal animations, current year, office-hours highlight, and contact-form email draft handling
 - `privacy-policy.html` - Basic privacy policy page
 - `favicon.svg` - Site icon
 
@@ -22,6 +23,6 @@ Static marketing website for Carlos Neal in Tulsa, Oklahoma.
 
 ## Notes
 
-- The site intentionally does not include a quote request form.
+- The contact form opens an addressed email draft to `cneal2@farmersagent.com` with the submitted details.
 - Primary calls to action are call, email, and directions.
 - Public contact details were based on the Farmers agent page for Carlos Neal.
